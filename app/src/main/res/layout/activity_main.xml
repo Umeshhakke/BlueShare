@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/background_color">
+
+    <!-- App Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Screen Mirror"
+        android:textSize="24sp"
+        android:textColor="@color/primary_text"
+        android:textAlignment="center"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Connection Status Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Connection Status"
+                android:textSize="18sp"
+                android:textColor="@color/secondary_text"/>
+
+            <TextView
+                android:id="@+id/statusTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Not connected"
+                android:textSize="20sp"
+                android:textColor="@color/primary_text"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Connection Button -->
+    <Button
+        android:id="@+id/connectButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connect to Server"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:backgroundTint="@color/primary_color"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"/>
+
+    <!-- Additional Options (Optional) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Options"
+            android:textSize="16sp"
+            android:textColor="@color/secondary_text"
+            android:layout_marginBottom="8dp"/>
+
+        <Switch
+            android:id="@+id/qualitySwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="High Quality"
+            android:checked="false"/>
+    </LinearLayout>
+
+    <!-- Connection Info (Optional) -->
+    <TextView
+        android:id="@+id/connectionInfoTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MAC: E4:C7:67:33:C6:82"
+        android:textSize="14sp"
+        android:textColor="@color/hint_text"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"/>
+</LinearLayout>
